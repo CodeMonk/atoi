@@ -22,7 +22,7 @@ int atoi(char *str) {
 
     // Do number
     for (; *str && isDigit(*str); str++) {
-        result += (result * 10) + (*str - '0');
+        result = (result * 10) + (*str - '0');
     }
 
     return result * neg_multiplier;

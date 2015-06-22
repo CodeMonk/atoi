@@ -1,18 +1,17 @@
 #include <stdio.h>
-#include <assert.h>
 #include "atoi.h"
+#include "test.h"
 
 int main() {
-    assert (atoi("123") == 123);
-    assert (atoi("-123") == -123);
-    assert (atoi("   -123") == -123);
-    assert (atoi("   123") == 123);
-    assert (atoi("   12h3") == 12);
-    assert (atoi(" -  12h3") == 0);
-    assert (atoi(" -12h3") == -12);
-    assert (atoi("") == -0);
-    assert (atoi("Fred") == -0);
+    TestEqualInt (atoi("123") , 123);
+    TestEqualInt (atoi("-123") , -123);
+    TestEqualInt (atoi("   -123") , -123);
+    TestEqualInt (atoi("   123") , 123);
+    TestEqualInt (atoi("   12h3") , 12);
+    TestEqualInt (atoi(" -  12h3") , 0);
+    TestEqualInt (atoi(" -12h3") , -12);
+    TestEqualInt (atoi("") , -0);
+    TestEqualInt (atoi("Fred") , -0);
 
-    printf("All tests passed!\n");
     return 0;
 }
