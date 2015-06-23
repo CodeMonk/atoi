@@ -13,5 +13,7 @@ int main() {
     TestEqualInt (atoi("") , -0);
     TestEqualInt (atoi("Fred") , -0);
 
+    printf("Tests finished.  Any errors would have been logged above.\n");
+
     return 0;
 }
